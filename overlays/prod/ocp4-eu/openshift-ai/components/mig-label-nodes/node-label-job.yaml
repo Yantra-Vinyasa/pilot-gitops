@@ -33,8 +33,8 @@ spec:
               echo "Using MIG configuration: $MIG_CONFIGURATION"
               
               # Convert NODES_LIST into an array
-              IFS=$'\n' read -rd '' -a NODES <<< "$NODES_LIST"
-
+              NODES_LIST=$(echo "$NODES_LIST" | awk NF)
+              mapfile -t NODES <<< "$NODES_LIST"
               # Process each node
               for NODE in "${NODES[@]}"; do
                 if [ -z "$NODE" ]; then
