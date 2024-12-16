@@ -8,4 +8,4 @@ helmCharts:
 - name: console-plugin-nvidia-gpu
   version: 0.2.5
   valuesFile: values.yaml
-  releaseName: console-plugin-nvidia-gpu-0.2.5
+  releaseName: console-plugin-nvidia-gpu
